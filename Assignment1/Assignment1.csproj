@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStructures\SingleLinkedList\LinkedList.cs" />
+    <Compile Include="DataStructures\SingleLinkedList\LinkedListNode.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\Person.cs" />
