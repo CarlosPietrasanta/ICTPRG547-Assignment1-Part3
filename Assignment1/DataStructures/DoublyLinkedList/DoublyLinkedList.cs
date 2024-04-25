@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 
-namespace Assignment1.DataStructures.SingleLinkedList
+namespace Assignment1.DataStructures.DoublyLinkedList
 {
-    public class SingleLinkedList<T> : ICollection<T>
+    public class DoublyLinkedList<T> : ICollection<T>
     {
         public LinkedListNode<T> Head
         {
@@ -36,15 +36,19 @@ namespace Assignment1.DataStructures.SingleLinkedList
             Head = node;
             // Set the original Head (and hence the rest of the list) to be the Head's Next node
             Head.Next = temp;
-            // Add 1 to count to keep track of the nodes quantity
-            Count++;
             // If the list only has one item, Tail and Head should be the same node
-            if (Count == 1)
+            if (Count == 0)
             {
                 Tail = Head;
             }
+            else
+            {
+                // temp.Previous was null, now it's head
+                temp.Previous = Head;
+            }
+            // Add 1 to count to keep track of the nodes quantity
+            Count++;
         }
-
         public void AddLast(T value)
         {
             AddLast(new LinkedListNode<T>(value));
@@ -61,6 +65,8 @@ namespace Assignment1.DataStructures.SingleLinkedList
             {
                 // Assign the current Tail next node to be the new passed node, that will be now the Tail
                 Tail.Next = node;
+                // Update node's Previous to be the existing Tail
+                node.Previous = Tail;
             }
             // Make the new node the Tail
             Tail = node;
@@ -80,6 +86,11 @@ namespace Assignment1.DataStructures.SingleLinkedList
                     // If there are no more items in the list, Tail must be reset to null
                     Tail = null;
                 }
+                else
+                {
+                    // As we removed the original Head, the new Head (2nd item before) Node's previous must be set to null
+                    Head.Previous = null;
+                }
             }
         }
 
@@ -95,19 +106,10 @@ namespace Assignment1.DataStructures.SingleLinkedList
                 }
                 else
                 {
-                    // Start looking for the last node from Head
-                    LinkedListNode<T> current = Head;
-
-                    while (current.Next != Tail)
-                    {
-                        // Keep moving to Next node while current node's next isn't Tail
-                        current = current.Next;
-                    }
-
-                    // Set penultimate node's next to null to delete the Tail
-                    current.Next = null;
-                    // Set Tail to be the current node now that the original Tail we deleted
-                    Tail = current;
+                    // Set Tail to be its previous node
+                    Tail = Tail.Previous;
+                    // Set the new Tail node next to be null (end of linked list)
+                    Tail.Next = null;
                 }
             }
             Count--;
@@ -164,6 +166,7 @@ namespace Assignment1.DataStructures.SingleLinkedList
             }
         }
 
+
         public bool Remove(T item)
         {
             LinkedListNode<T> previous = null;
@@ -185,6 +188,11 @@ namespace Assignment1.DataStructures.SingleLinkedList
                         {
                             // Set the Tail to be previous node
                             Tail = previous;
+                        }
+                        else
+                        {
+                            // Update next node's previous
+                            current.Next.Previous = previous;
                         }
                         Count--;
                     }
