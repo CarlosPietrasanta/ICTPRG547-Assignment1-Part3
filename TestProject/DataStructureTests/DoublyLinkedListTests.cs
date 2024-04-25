@@ -1,13 +1,13 @@
-﻿using Assignment1.DataStructures.SingleLinkedList;
+﻿using Assignment1.DataStructures.DoublyLinkedList;
 using Assignment1.Models;
 using Assignment1.Utils;
 
-namespace TestProject.DataStructuresTest.SingleLinkedList
+namespace TestProject.DataStructuresTest.DoublyLinkedList
 {
     public class DoublyLinkedListTests
     {
         Student[] studentArray;
-        SingleLinkedList<Student> studentsLinkedList;
+        DoublyLinkedList<Student> studentsLinkedList;
         Student headStudent;
         Student tailStudent;
 
@@ -15,7 +15,7 @@ namespace TestProject.DataStructuresTest.SingleLinkedList
         public void SetUp() 
         {
             studentArray = TestData.CreateTestStudentArray();
-            studentsLinkedList = new SingleLinkedList<Student>();
+            studentsLinkedList = new DoublyLinkedList<Student>();
 
             foreach (Student student in studentArray)
             {
