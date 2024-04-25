@@ -1,15 +1,105 @@
 ﻿using Assignment1.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static Assignment1.Models.Enrollment;
 
 namespace Assignment1.Utils
 {
     public static class TestData
     {
+        public static Student GetCarlosPietrasantaStudent()
+        {
+            // Create some test subjects
+            Subject testSubject1 = new Subject("ABC123", "Test Subject ABC123", 99.99M);
+            Subject testSubject2 = new Subject("ABC123", "Test Subject ABC123", 99.99M);
+            Subject testSubject3 = new Subject("ABC123", "Test Subject ABC123", 99.99M);
+
+            // Create enrollments for student 
+            List<Enrollment> student1Enrollments = new List<Enrollment>()
+            {
+                new Enrollment(DateTime.Now.AddDays(-30), GradeEnum.NotProvided, SemesterEnum.First, testSubject1),
+                new Enrollment(DateTime.Now.AddDays(-60), GradeEnum.NotProvided, SemesterEnum.First, testSubject2),
+                new Enrollment(DateTime.Now.AddDays(-15), GradeEnum.NotProvided, SemesterEnum.Second, testSubject3)
+            };
+
+            // Create an Address for student 
+            Address student1Address = new Address("123", "Test St.", "Testingham", "5000", StateEnum.SA);
+
+            // Create an Address for student 
+            Student student = new Student("Carlos Pietrasanta",
+                                   "Carlos.PIETRASANTA@student.tafesa.edu.au",
+                                   "04444 444 444",
+                                   student1Address,
+                                   "123456",
+                                   "Test Program",
+                                   DateTime.Now.AddYears(-1),
+                                   student1Enrollments);
+
+            return student;
+        }
+
+        public static Student GetHeadStudent()
+        {
+            // Create some test subjects
+            Subject testSubject1 = new Subject("ABC123", "Head Subject ABC123", 99.99M);
+            Subject testSubject2 = new Subject("ABC123", "Head Subject ABC123", 99.99M);
+            Subject testSubject3 = new Subject("ABC123", "Head Subject ABC123", 99.99M);
+
+            // Create enrollments for student 
+            List<Enrollment> studentEnrollments = new List<Enrollment>()
+            {
+                new Enrollment(DateTime.Now.AddDays(-30), GradeEnum.NotProvided, SemesterEnum.First, testSubject1),
+                new Enrollment(DateTime.Now.AddDays(-60), GradeEnum.NotProvided, SemesterEnum.First, testSubject2),
+                new Enrollment(DateTime.Now.AddDays(-15), GradeEnum.NotProvided, SemesterEnum.Second, testSubject3)
+            };
+
+            // Create an Address for student 
+            Address studentAddress = new Address("999", "Head St.", "Headingham", "5000", StateEnum.SA);
+
+            // Create an Address for student 
+            Student student = new Student("Head Test Student",
+                                   "Head.Node@linkedlist.edu.au",
+                                   "04555 555 555",
+                                   studentAddress,
+                                   "321321",
+                                   "Head Program",
+                                   DateTime.Now.AddYears(-1),
+                                   studentEnrollments);
+
+            return student;
+        }
+
+        public static Student GetTailStudent()
+        {
+            // Create some test subjects
+            Subject testSubject4 = new Subject("XYZ789", "Tail Subject XYZ789", 95.50M);
+            Subject testSubject5 = new Subject("XYZ789", "Tail Subject XYZ789", 95.50M);
+            Subject testSubject6 = new Subject("XYZ789", "Tail Subject XYZ789", 95.50M);
+
+            // Create enrollments for student 
+            List<Enrollment> studentEnrollments = new List<Enrollment>()
+            {
+                new Enrollment(DateTime.Now.AddDays(-20), GradeEnum.NotProvided, SemesterEnum.Second, testSubject4),
+                new Enrollment(DateTime.Now.AddDays(-45), GradeEnum.NotProvided, SemesterEnum.First, testSubject5),
+                new Enrollment(DateTime.Now.AddDays(-10), GradeEnum.NotProvided, SemesterEnum.Second, testSubject6)
+            };
+
+            // Create an Address for student 
+            Address studentAddress = new Address("123", "Tail St.", "Tailville", "6000", StateEnum.NSW);
+
+            // Create a Student instance
+            Student student = new Student("Tail Test Student",
+                                    "Tail.Node@linkedlist.edu.au",
+                                    "04666 666 666",
+                                    studentAddress,
+                                    "654654",
+                                    "Tail Program",
+                                    DateTime.Now.AddYears(-2),
+                                    studentEnrollments);
+
+            return student;
+        }
+
         public static Student[] CreateTestStudentArray()
         {
             // Create some test subjects
@@ -19,26 +109,7 @@ namespace Assignment1.Utils
             Subject testSubject4 = new Subject("ABC123", "Test Subject ABC123", 99.99M);
             Subject testSubject5 = new Subject("ABC123", "Test Subject ABC123", 99.99M);
 
-            // Create enrollments for student 1
-            List<Enrollment> student1Enrollments = new List<Enrollment>()
-            {
-                new Enrollment(DateTime.Now.AddDays(-30), GradeEnum.NotProvided, SemesterEnum.First, testSubject1),
-                new Enrollment(DateTime.Now.AddDays(-60), GradeEnum.NotProvided, SemesterEnum.First, testSubject2),
-                new Enrollment(DateTime.Now.AddDays(-15), GradeEnum.NotProvided, SemesterEnum.Second, testSubject3)
-            };
-
-            // Create an Address for student 1
-            Address student1Address = new Address("123", "Test St.", "Testingham", "5000", StateEnum.SA);
-
-            // Create an Address for student 1
-            Student student1 = new Student("Carlos Pietrasanta",
-                                   "Carlos.PIETRASANTA@student.tafesa.edu.au",
-                                   "04444 444 444",
-                                   student1Address,
-                                   "123456",
-                                   "Test Program",
-                                   DateTime.Now.AddYears(-1),
-                                   student1Enrollments);
+            Student student1 = GetCarlosPietrasantaStudent();
 
             // Create enrollments for student 2
             List<Enrollment> student2Enrollments = new List<Enrollment>()

@@ -1,12 +1,9 @@
 ﻿using System.Collections;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Net.Mime;
 
 namespace Assignment1.DataStructures.SingleLinkedList
 {
-    public class LinkedList<T> : ICollection<T>
+    public class SingleLinkedList<T> : ICollection<T>
     {
         public LinkedListNode<T> Head
         {
