@@ -5,12 +5,12 @@ namespace Assignment1.Models
 {
     public class Student : Person, IComparable, IComparable<Student>
     {
-        public string StudentId { get; set; }
+        public int StudentId { get; set; }
         public string Program { get; set; }
         public DateTime? DateRegistered { get; set; }
         public List<Enrollment> Enrollments { get; set; }
 
-        private const string DEFAULT_STUDENT_ID = "No Student ID Provided";
+        private const int DEFAULT_STUDENT_ID = 000000;
         private const string DEFAULT_PROGRAM = "No Program Provided";
         private static readonly List<Enrollment> DEFAULT_ENROLLMENTS = new List<Enrollment>();
 
@@ -26,7 +26,7 @@ namespace Assignment1.Models
                        string email,
                        string phoneNumber,
                        Address address,
-                       string studentId,
+                       int studentId,
                        string program,
                        DateTime dateRegisted,
                        List<Enrollment> enrollments)

@@ -30,7 +30,7 @@ namespace Assignment1.Utils
                                    "Carlos.PIETRASANTA@student.tafesa.edu.au",
                                    "04444 444 444",
                                    student1Address,
-                                   "123456",
+                                   123456,
                                    "Test Program",
                                    DateTime.Now.AddYears(-1),
                                    student1Enrollments);
@@ -61,7 +61,7 @@ namespace Assignment1.Utils
                                    "Head.Node@linkedlist.edu.au",
                                    "04555 555 555",
                                    studentAddress,
-                                   "321321",
+                                   321321,
                                    "Head Program",
                                    DateTime.Now.AddYears(-1),
                                    studentEnrollments);
@@ -92,7 +92,7 @@ namespace Assignment1.Utils
                                     "Tail.Node@linkedlist.edu.au",
                                     "04666 666 666",
                                     studentAddress,
-                                    "654654",
+                                    654654,
                                     "Tail Program",
                                     DateTime.Now.AddYears(-2),
                                     studentEnrollments);
@@ -127,7 +127,7 @@ namespace Assignment1.Utils
                                    "emily.johnson@example.com",
                                    "05555 555 555",
                                    student2Address,
-                                   "654321",
+                                   654321,
                                    "Another Test Program",
                                    DateTime.Now.AddYears(-2),
                                    student2Enrollments);
@@ -148,7 +148,7 @@ namespace Assignment1.Utils
                                    "michael.smith@example.com",
                                    "06666 666 666",
                                    student3Address,
-                                   "123123",
+                                   123123,
                                    "Yet Another Program",
                                    DateTime.Now.AddYears(-3),
                                    student3Enrollments);
@@ -169,7 +169,7 @@ namespace Assignment1.Utils
                                    "emma.brown@example.com",
                                    "07777 777 777",
                                    student4Address,
-                                   "111111",
+                                   111111,
                                    "Yet Another Program",
                                    DateTime.Now.AddYears(-3),
                                    student4Enrollments);
@@ -190,7 +190,7 @@ namespace Assignment1.Utils
                                    "william.taylor@example.com",
                                    "08888 888 888",
                                    student5Address,
-                                   "222222",
+                                   222222,
                                    "Yet Another Program",
                                    DateTime.Now.AddYears(-2),
                                    student5Enrollments);
@@ -211,7 +211,7 @@ namespace Assignment1.Utils
                                    "olivia.anderson@example.com",
                                    "09999 999 999",
                                    student6Address,
-                                   "333333",
+                                   333333,
                                    "Yet Another Program",
                                    DateTime.Now.AddYears(-1),
                                    student6Enrollments);
@@ -232,7 +232,7 @@ namespace Assignment1.Utils
                                    "james.wilson@example.com",
                                    "01111 111 111",
                                    student7Address,
-                                   "444444",
+                                   444444,
                                    "Yet Another Program",
                                    DateTime.Now.AddYears(-3),
                                    student7Enrollments);
@@ -253,7 +253,7 @@ namespace Assignment1.Utils
                                    "sophia.lee@example.com",
                                    "02222 222 222",
                                    student8Address,
-                                   "555555",
+                                   555555,
                                    "Yet Another Program",
                                    DateTime.Now.AddYears(-2),
                                    student8Enrollments);
@@ -274,7 +274,7 @@ namespace Assignment1.Utils
                                    "liam.martinez@example.com",
                                    "03333 333 333",
                                    student9Address,
-                                   "666666",
+                                   666666,
                                    "Yet Another Program",
                                    DateTime.Now.AddYears(-1),
                                    student9Enrollments);
@@ -295,7 +295,7 @@ namespace Assignment1.Utils
                                    "amelia.garcia@example.com",
                                    "04444 444 444",
                                    student10Address,
-                                   "777777",
+                                   777777,
                                    "Yet Another Program",
                                    DateTime.Now.AddYears(-3),
                                    student10Enrollments);
@@ -316,7 +316,7 @@ namespace Assignment1.Utils
                                    "michael.smith@example.com",
                                    "06666 666 666",
                                    student11Address,
-                                   "987654",
+                                   987654,
                                    "Yet Another Test Program",
                                    DateTime.Now.AddYears(-1),
                                    student11Enrollments);

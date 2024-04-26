@@ -36,7 +36,7 @@ namespace TestProject
                                    "Carlos.PIETRASANTA@student.tafesa.edu.au",
                                    "04444 444 444",
                                    student1Address,
-                                   "123456",
+                                   123456,
                                    "Test Program",
                                    DateTime.Now.AddYears(-1),
                                    student1Enrollments);
@@ -58,7 +58,7 @@ namespace TestProject
                                    "NotAnActual@student.nope.edu.au",
                                    "0111 111 111",
                                    student2Address,
-                                   "000000",
+                                   000000,
                                    "Unknown Program",
                                    DateTime.Now.AddYears(-15),
                                    student2Enrollments);

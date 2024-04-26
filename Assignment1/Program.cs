@@ -32,7 +32,7 @@ namespace Assignment1
                                    "Carlos.PIETRASANTA@student.tafesa.edu.au",
                                    "04444 444 444",
                                    student1Address,
-                                   "123456",
+                                   123456,
                                    "Test Program",
                                    DateTime.Now.AddYears(-1),
                                    student1Enrollments);
@@ -53,7 +53,7 @@ namespace Assignment1
                                    "emily.johnson@example.com",
                                    "05555 555 555",
                                    student2Address,
-                                   "654321",
+                                   654321,
                                    "Another Test Program",
                                    DateTime.Now.AddYears(-2),
                                    student2Enrollments);
@@ -74,7 +74,7 @@ namespace Assignment1
                                    "michael.smith@example.com",
                                    "06666 666 666",
                                    student3Address,
-                                   "123456", // Note that for testing purposes this student has the same Id as student1
+                                   123456, // Note that for testing purposes this student has the same Id as student1
                                    "Yet Another Program",
                                    DateTime.Now.AddYears(-3),
                                    student3Enrollments);
