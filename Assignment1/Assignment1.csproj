@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStructures\BinaryTree\BinaryTree.cs" />
+    <Compile Include="DataStructures\BinaryTree\BinaryTreeNode.cs" />
     <Compile Include="DataStructures\DoublyLinkedList\DoublyLinkedList.cs" />
     <Compile Include="DataStructures\DoublyLinkedList\LinkedListNode.cs" />
     <Compile Include="DataStructures\SingleLinkedList\SingleLinkedList.cs" />
