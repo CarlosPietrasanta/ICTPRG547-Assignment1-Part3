@@ -340,5 +340,168 @@ namespace Assignment1.Utils
 
             return studentArray;
         }
+
+        public static Student[] CreateTestStudentArrayForBinaryTree()
+        {
+            // Create some test subjects
+            Subject testSubject1 = new Subject("ABC123", "Test Subject ABC123", 99.99M);
+            Subject testSubject2 = new Subject("ABC123", "Test Subject ABC123", 99.99M);
+            Subject testSubject3 = new Subject("ABC123", "Test Subject ABC123", 99.99M);
+            Subject testSubject4 = new Subject("ABC123", "Test Subject ABC123", 99.99M);
+            Subject testSubject5 = new Subject("ABC123", "Test Subject ABC123", 99.99M);
+                        
+            // Create enrollments for student 1
+            List<Enrollment> student1Enrollments = new List<Enrollment>()
+            {
+                new Enrollment(DateTime.Now.AddDays(-30), GradeEnum.NotProvided, SemesterEnum.First, testSubject4),
+                new Enrollment(DateTime.Now.AddDays(-90), GradeEnum.NotProvided, SemesterEnum.Second, testSubject3),
+                new Enrollment(DateTime.Now.AddDays(-20), GradeEnum.NotProvided, SemesterEnum.Second, testSubject1)
+            };
+
+            // Create an Address for student 1
+            Address student4Address = new Address("1011", "Sample Rd.", "Sampletown", "3000", StateEnum.QLD);
+
+            // Create student 1
+
+            Student student1 = new Student("Emma Brown",
+                                   "emma.brown@example.com",
+                                   "07777 777 777",
+                                   student4Address,
+                                   444444,
+                                   "Yet Another Program",
+                                   DateTime.Now.AddYears(-3),
+                                   student1Enrollments);
+
+            // Create enrollments for student 5
+            List<Enrollment> student5Enrollments = new List<Enrollment>()
+            {
+                new Enrollment(DateTime.Now.AddDays(-50), GradeEnum.NotProvided, SemesterEnum.First, testSubject2),
+                new Enrollment(DateTime.Now.AddDays(-80), GradeEnum.NotProvided, SemesterEnum.Second, testSubject4),
+                new Enrollment(DateTime.Now.AddDays(-25), GradeEnum.NotProvided, SemesterEnum.First, testSubject3)
+            };
+
+            // Create an Address for student 5
+            Address student5Address = new Address("1213", "Sample Blvd.", "Samplecity", "4000", StateEnum.SA);
+
+            // Create student 5
+            Student student2 = new Student("William Taylor",
+                                   "william.taylor@example.com",
+                                   "08888 888 888",
+                                   student5Address,
+                                   222222,
+                                   "Yet Another Program",
+                                   DateTime.Now.AddYears(-2),
+                                   student5Enrollments);
+
+            // Create enrollments for student 6
+            List<Enrollment> student6Enrollments = new List<Enrollment>()
+            {
+                new Enrollment(DateTime.Now.AddDays(-55), GradeEnum.NotProvided, SemesterEnum.Second, testSubject1),
+                new Enrollment(DateTime.Now.AddDays(-85), GradeEnum.NotProvided, SemesterEnum.First, testSubject2),
+                new Enrollment(DateTime.Now.AddDays(-35), GradeEnum.NotProvided, SemesterEnum.Second, testSubject5)
+            };
+
+            // Create an Address for student 6
+            Address student6Address = new Address("1415", "Example Lane", "Exampletown", "5000", StateEnum.TAS);
+
+            // Create student 6
+            Student student3 = new Student("Olivia Anderson",
+                                   "olivia.anderson@example.com",
+                                   "09999 999 999",
+                                   student6Address,
+                                   666666,
+                                   "Yet Another Program",
+                                   DateTime.Now.AddYears(-1),
+                                   student6Enrollments);
+
+            // Create enrollments for student 7
+            List<Enrollment> student7Enrollments = new List<Enrollment>()
+            {
+                new Enrollment(DateTime.Now.AddDays(-65), GradeEnum.NotProvided, SemesterEnum.Second, testSubject3),
+                new Enrollment(DateTime.Now.AddDays(-95), GradeEnum.NotProvided, SemesterEnum.First, testSubject4),
+                new Enrollment(DateTime.Now.AddDays(-40), GradeEnum.NotProvided, SemesterEnum.First, testSubject1)
+            };
+
+            // Create an Address for student 7
+            Address student7Address = new Address("1617", "Sample Ave.", "Samplecity", "6000", StateEnum.ACT);
+
+            // Create student 7
+            Student student4 = new Student("James Wilson",
+                                   "james.wilson@example.com",
+                                   "01111 111 111",
+                                   student7Address,
+                                   333333,
+                                   "Yet Another Program",
+                                   DateTime.Now.AddYears(-3),
+                                   student7Enrollments);
+
+            // Create enrollments for student 6
+            List<Enrollment> student8Enrollments = new List<Enrollment>()
+            {
+                new Enrollment(DateTime.Now.AddDays(-70), GradeEnum.NotProvided, SemesterEnum.First, testSubject5),
+                new Enrollment(DateTime.Now.AddDays(-85), GradeEnum.NotProvided, SemesterEnum.Second, testSubject2),
+                new Enrollment(DateTime.Now.AddDays(-30), GradeEnum.NotProvided, SemesterEnum.First, testSubject4)
+            };
+
+            // Create an Address for student 6
+            Address student8Address = new Address("1819", "Sample Rd.", "Sampletown", "7000", StateEnum.NT);
+
+            // Create student 6
+            Student student5 = new Student("Sophia Lee",
+                                   "sophia.lee@example.com",
+                                   "02222 222 222",
+                                   student8Address,
+                                   555555,
+                                   "Yet Another Program",
+                                   DateTime.Now.AddYears(-2),
+                                   student8Enrollments);
+
+            // Create enrollments for student 6
+            List<Enrollment> student9Enrollments = new List<Enrollment>()
+            {
+                new Enrollment(DateTime.Now.AddDays(-75), GradeEnum.NotProvided, SemesterEnum.Second, testSubject1),
+                new Enrollment(DateTime.Now.AddDays(-90), GradeEnum.NotProvided, SemesterEnum.First, testSubject3),
+                new Enrollment(DateTime.Now.AddDays(-35), GradeEnum.NotProvided, SemesterEnum.Second, testSubject4)
+            };
+
+            // Create an Address for student 6
+            Address student9Address = new Address("2021", "Example St.", "Examplecity", "8000", StateEnum.WA);
+
+            // Create student 6
+            Student student6 = new Student("Liam Martinez",
+                                   "liam.martinez@example.com",
+                                   "03333 333 333",
+                                   student9Address,
+                                   777777,
+                                   "Yet Another Program",
+                                   DateTime.Now.AddYears(-1),
+                                   student9Enrollments);
+
+            // Create enrollments for student 7
+            List<Enrollment> student10Enrollments = new List<Enrollment>()
+            {
+                new Enrollment(DateTime.Now.AddDays(-80), GradeEnum.NotProvided, SemesterEnum.First, testSubject2),
+                new Enrollment(DateTime.Now.AddDays(-95), GradeEnum.NotProvided, SemesterEnum.Second, testSubject5),
+                new Enrollment(DateTime.Now.AddDays(-40), GradeEnum.NotProvided, SemesterEnum.First, testSubject3)
+            };
+
+            // Create an Address for student 7
+            Address student10Address = new Address("2223", "Example Blvd.", "Examplecity", "9000", StateEnum.SA);
+
+            // Create student 7
+            Student student7 = new Student("Amelia Garcia",
+                                   "amelia.garcia@example.com",
+                                   "04444 444 444",
+                                   student10Address,
+                                   111111,
+                                   "Yet Another Program",
+                                   DateTime.Now.AddYears(-3),
+                                   student10Enrollments);
+
+            
+            Student[] studentArray = { student1, student2, student3, student4, student5, student6, student7 };
+
+            return studentArray;
+        }
     }
 }

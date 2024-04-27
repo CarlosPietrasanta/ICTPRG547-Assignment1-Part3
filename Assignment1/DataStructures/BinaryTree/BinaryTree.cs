@@ -131,7 +131,7 @@ namespace Assignment1.DataStructures.BinaryTree
         {
             if (parent != null)
             {
-                Console.WriteLine(parent.Data + " ");
+                Console.Write(parent.Data + " ");
                 TraversePreOrder(parent.LeftNode);
                 TraversePreOrder(parent.RightNode);
             }
@@ -142,7 +142,7 @@ namespace Assignment1.DataStructures.BinaryTree
             if (parent != null)
             {
                 TraverseInOrder(parent.LeftNode);
-                Console.WriteLine(parent.Data + " ");
+                Console.Write(parent.Data + " ");
                 TraverseInOrder(parent.RightNode);
             }
         }
@@ -153,7 +153,7 @@ namespace Assignment1.DataStructures.BinaryTree
             {
                 TraversePostOrder(parent.LeftNode);
                 TraversePostOrder(parent.RightNode);
-                Console.WriteLine(parent.Data + " ");
+                Console.Write(parent.Data + " ");
             }
         }
 

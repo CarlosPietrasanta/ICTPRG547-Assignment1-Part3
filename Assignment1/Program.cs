@@ -1,4 +1,5 @@
-﻿using Assignment1.Models;
+﻿using Assignment1.DataStructures.BinaryTree;
+using Assignment1.Models;
 using Assignment1.Utils;
 using System;
 using System.Collections.Generic;

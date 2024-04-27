@@ -4,7 +4,7 @@ using Assignment1.Utils;
 
 namespace TestProject.DataStructuresTest.SingleLinkedList
 {
-    public class DoublyLinkedListTests
+    public class SingleLinkedListTests
     {
         Student[] studentArray;
         SingleLinkedList<Student> studentsLinkedList;
