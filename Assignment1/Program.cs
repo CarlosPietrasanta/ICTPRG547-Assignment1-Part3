@@ -110,71 +110,92 @@ namespace Assignment1
 
             //Console.WriteLine();
 
-            Console.WriteLine($"Student 1 (Id = {student1.StudentId}) .CompareTo() Student 2 (Id = {student2.StudentId}): {student1.CompareTo(student2)}");
-            Console.WriteLine($"Student 1 (Id = {student1.StudentId}) .CompareTo() Student 3 (Id = {student3.StudentId}): {student1.CompareTo(student3)}");
-            Console.WriteLine($"Student 2 (Id = {student2.StudentId}) .CompareTo() Student 3 (Id = {student3.StudentId}): {student2.CompareTo(student3)}");
+            //Console.WriteLine($"Student 1 (Id = {student1.StudentId}) .CompareTo() Student 2 (Id = {student2.StudentId}): {student1.CompareTo(student2)}");
+            //Console.WriteLine($"Student 1 (Id = {student1.StudentId}) .CompareTo() Student 3 (Id = {student3.StudentId}): {student1.CompareTo(student3)}");
+            //Console.WriteLine($"Student 2 (Id = {student2.StudentId}) .CompareTo() Student 3 (Id = {student3.StudentId}): {student2.CompareTo(student3)}");
+
+            //Console.WriteLine();
+
+            //Console.WriteLine($"Student 1 (Id = {student1.StudentId}) < Student 2 (Id = {student2.StudentId}): {student1 < student2}");
+            //Console.WriteLine($"Student 1 (Id = {student1.StudentId}) <= Student 2 (Id = {student2.StudentId}): {student1 <= student2}");
+            //Console.WriteLine($"Student 1 (Id = {student1.StudentId}) > Student 2 (Id = {student2.StudentId}): {student1 > student2}");
+            //Console.WriteLine($"Student 1 (Id = {student1.StudentId}) >= Student 2 (Id = {student2.StudentId}): {student1 >= student2}");
+
+            //Console.WriteLine();
+
+            //Console.WriteLine($"Student 1 (Id = {student1.StudentId}) < Student 3 (Id = {student3.StudentId}): {student1 < student3}");
+            //Console.WriteLine($"Student 1 (Id = {student1.StudentId}) <= Student 3 (Id = {student3.StudentId}): {student1 <= student3}");
+            //Console.WriteLine($"Student 1 (Id = {student1.StudentId}) > Student 3 (Id = {student3.StudentId}): {student1 > student3}");
+            //Console.WriteLine($"Student 1 (Id = {student1.StudentId}) >= Student 3 (Id = {student3.StudentId}): {student1 >= student3}");
+
+            //Console.WriteLine();
+
+            //Console.WriteLine($"Student 2 (Id = {student2.StudentId}) < Student 3 (Id = {student3.StudentId}): {student2 < student3}");
+            //Console.WriteLine($"Student 2 (Id = {student2.StudentId}) <= Student 3 (Id = {student3.StudentId}): {student2 <= student3}");
+            //Console.WriteLine($"Student 2 (Id = {student2.StudentId}) > Student 3 (Id = {student3.StudentId}): {student2 > student3}");
+            //Console.WriteLine($"Student 2 (Id = {student2.StudentId}) >= Student 3 (Id = {student3.StudentId}): {student2 >= student3}");
+
+            //Console.WriteLine();
+
+            //Student[] studentArray = TestData.CreateTestStudentArray();
+
+            //Console.WriteLine("Original Array Order:");
+
+            //foreach (var item in studentArray)
+            //{
+            //    Console.WriteLine("\t" + item.StudentId);
+            //}
+
+            //int student1IndexLinearSearch = UtilityClass.LinearSeachArray(studentArray, student1);
+
+            //Console.WriteLine($"\nIndex of Student 1 Linear Search (Id {student1.StudentId}): {student1IndexLinearSearch}\n");
+
+            //UtilityClass.BubbleSort(studentArray);
+
+            //Console.WriteLine("Sorted Array Order:");
+
+            //foreach (var item in studentArray)
+            //{
+            //    Console.WriteLine("\t" + item.StudentId);
+            //}
+
+            //Console.WriteLine("\nNow we can use the binary search:");
+
+            //int student1IndexBinarySearch = UtilityClass.BinarySearchArray(studentArray, student1);
+
+            //Console.WriteLine($"\nIndex of Student 1 Binary Search (Id {student1.StudentId}): {student1IndexBinarySearch}\n");
+
+            //Console.WriteLine("Now let's test Bubble Sort in descending order:");
+
+            //UtilityClass.BubbleSortDescendingOrder(studentArray);
+
+            //Console.WriteLine("Sorted Array Descending Order:");
+
+            //foreach (var item in studentArray)
+            //{
+            //    Console.WriteLine("\t" + item.StudentId);
+            //}
+
+
+
+            // Part 4 Exception Handling Test
+
+            int student1IndexLinearSearch = UtilityClass.LinearSeachArray(null, student1);
+
+            if (student1IndexLinearSearch >= 0)
+            {
+                Console.WriteLine($"\nIndex of Student 1 Linear Search (Id {student1.StudentId}): {student1IndexLinearSearch}\n");
+            }
+
+            Student[] emptyArray = new Student[0];
+
+            int student1IndexBinarySearch = UtilityClass.BinarySearchArray(emptyArray, new Student());
+
+            if (student1IndexBinarySearch >= 0)
+            {
+                Console.WriteLine($"\nIndex of Student 1 Linear Search (Id {student1.StudentId}): {student1IndexBinarySearch}\n");
+            }
             
-            Console.WriteLine();
-
-            Console.WriteLine($"Student 1 (Id = {student1.StudentId}) < Student 2 (Id = {student2.StudentId}): {student1 < student2}");
-            Console.WriteLine($"Student 1 (Id = {student1.StudentId}) <= Student 2 (Id = {student2.StudentId}): {student1 <= student2}");
-            Console.WriteLine($"Student 1 (Id = {student1.StudentId}) > Student 2 (Id = {student2.StudentId}): {student1 > student2}");
-            Console.WriteLine($"Student 1 (Id = {student1.StudentId}) >= Student 2 (Id = {student2.StudentId}): {student1 >= student2}");
-
-            Console.WriteLine();
-
-            Console.WriteLine($"Student 1 (Id = {student1.StudentId}) < Student 3 (Id = {student3.StudentId}): {student1 < student3}");
-            Console.WriteLine($"Student 1 (Id = {student1.StudentId}) <= Student 3 (Id = {student3.StudentId}): {student1 <= student3}");
-            Console.WriteLine($"Student 1 (Id = {student1.StudentId}) > Student 3 (Id = {student3.StudentId}): {student1 > student3}");
-            Console.WriteLine($"Student 1 (Id = {student1.StudentId}) >= Student 3 (Id = {student3.StudentId}): {student1 >= student3}");
-
-            Console.WriteLine();
-
-            Console.WriteLine($"Student 2 (Id = {student2.StudentId}) < Student 3 (Id = {student3.StudentId}): {student2 < student3}");
-            Console.WriteLine($"Student 2 (Id = {student2.StudentId}) <= Student 3 (Id = {student3.StudentId}): {student2 <= student3}");
-            Console.WriteLine($"Student 2 (Id = {student2.StudentId}) > Student 3 (Id = {student3.StudentId}): {student2 > student3}");
-            Console.WriteLine($"Student 2 (Id = {student2.StudentId}) >= Student 3 (Id = {student3.StudentId}): {student2 >= student3}");
-
-            Console.WriteLine();
-
-            Student[] studentArray = TestData.CreateTestStudentArray();
-
-            Console.WriteLine("Original Array Order:");
-
-            foreach (var item in studentArray)
-            {
-                Console.WriteLine("\t" + item.StudentId);
-            }
-
-            int student1IndexLinearSearch = UtilityClass.LinearSeachArray(studentArray, student1);
-
-            Console.WriteLine($"\nIndex of Student 1 Linear Search (Id {student1.StudentId}): {student1IndexLinearSearch}\n");
-
-            UtilityClass.BubbleSort(studentArray);
-
-            Console.WriteLine("Sorted Array Order:");
-
-            foreach (var item in studentArray)
-            {
-                Console.WriteLine("\t" + item.StudentId);
-            }
-
-            Console.WriteLine("\nNow we can use the binary search:");
-
-            int student1IndexBinarySearch = UtilityClass.BinarySearchArray(studentArray, student1);
-
-            Console.WriteLine($"\nIndex of Student 1 Binary Search (Id {student1.StudentId}): {student1IndexBinarySearch}\n");
-
-            Console.WriteLine("Now let's test Bubble Sort in descending order:");
-
-            UtilityClass.BubbleSortDescendingOrder(studentArray);
-
-            Console.WriteLine("Sorted Array Descending Order:");
-
-            foreach (var item in studentArray)
-            {
-                Console.WriteLine("\t" + item.StudentId);
-            }
 
             Console.ReadLine();
         }

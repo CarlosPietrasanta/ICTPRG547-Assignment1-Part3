@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 
 namespace Assignment1.Utils
 {
@@ -13,26 +14,34 @@ namespace Assignment1.Utils
         /// <returns>The index of the item in the array if found. -1 if not found.</returns>
         public static int LinearSeachArray<T>(T[] array, T target) where T : IComparable<T>
         {
-            int i = 0;
-
-            // While we didn't reach the end of the array
-            while (i < array.Length)
+            try
             {
-                // If this evalues to true we know both elements are equal
-                if (target.CompareTo(array[i]) == 0)
-                {
-                    // Return the current index
-                    return i;
-                }
-                else
-                {
-                    // Add 1 to the index and keep iterating (back to the start of the while loop)
-                    i++;
-                }
-            }
+                int i = 0;
 
-            // If we reach this point the item has not been found, we return -1 to inform so
-            return -1;
+                // While we didn't reach the end of the array
+                while (i < array.Length)
+                {
+                    // If this evalues to true we know both elements are equal
+                    if (target.CompareTo(array[i]) == 0)
+                    {
+                        // Return the current index
+                        return i;
+                    }
+                    else
+                    {
+                        // Add 1 to the index and keep iterating (back to the start of the while loop)
+                        i++;
+                    }
+                }
+
+                // If we reach this point the item has not been found, we return -1 to inform so
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Something went wrong during linear search: " + ex.Message);
+                return -1;
+            }
         }
 
         /// <summary>
@@ -44,36 +53,44 @@ namespace Assignment1.Utils
         /// <returns>The index of the item in the array if found. -1 if not found.</returns>
         public static int BinarySearchArray<T>(T[] array, T target) where T : IComparable<T>
         {
-            int min = 0;
-            int max = array.Length - 1;
-            int mid;
-
-            do
+            try
             {
-                mid = (max + min) / 2; // Get the middle index of the array
+                int min = 0;
+                int max = array.Length - 1;
+                int mid;
 
-                // Compare items to get a value that will help us determine if it's the same item...
-                // ...or if it comes after or before in the array
-                int comparisonResult = target.CompareTo(array[mid]); 
+                do
+                {
+                    mid = (max + min) / 2; // Get the middle index of the array
 
-                // If comparison returned 0, we know it's the same item, return the current index being evaluated
-                if (comparisonResult == 0)
-                {
-                    return mid;
-                }
-                // If it returned a positive value, we need to focus on the upper half ("after" the current index) of the array
-                else if (comparisonResult > 0)
-                {
-                    min = mid + 1;
-                }
-                // Otherwise, it's a negative value, so we need to focus on the lower half ("before" the current index) of the array
-                else
-                {
-                    max = mid - 1;
-                }
-            } while (min <= max);
+                    // Compare items to get a value that will help us determine if it's the same item...
+                    // ...or if it comes after or before in the array
+                    int comparisonResult = target.CompareTo(array[mid]);
 
-            return -1;
+                    // If comparison returned 0, we know it's the same item, return the current index being evaluated
+                    if (comparisonResult == 0)
+                    {
+                        return mid;
+                    }
+                    // If it returned a positive value, we need to focus on the upper half ("after" the current index) of the array
+                    else if (comparisonResult > 0)
+                    {
+                        min = mid + 1;
+                    }
+                    // Otherwise, it's a negative value, so we need to focus on the lower half ("before" the current index) of the array
+                    else
+                    {
+                        max = mid - 1;
+                    }
+                } while (min <= max);
+
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Something went wrong during binary search: " + ex.Message);
+                return -1;
+            }
         }
 
         public static void BubbleSort<T>(T[] array) where T : IComparable<T>, IComparable
