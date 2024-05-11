@@ -176,8 +176,6 @@ namespace Assignment1
             //    Console.WriteLine("\t" + item.StudentId);
             //}
 
-
-
             // Part 4 Exception Handling Test
 
             int student1IndexLinearSearch = UtilityClass.LinearSeachArray(null, student1);
@@ -193,9 +191,21 @@ namespace Assignment1
 
             if (student1IndexBinarySearch >= 0)
             {
-                Console.WriteLine($"\nIndex of Student 1 Linear Search (Id {student1.StudentId}): {student1IndexBinarySearch}\n");
+                Console.WriteLine($"\nIndex of Student 1 Binary Search (Id {student1.StudentId}): {student1IndexBinarySearch}\n");
             }
-            
+
+            // Part 5 Debugging
+
+            Student[] studentArray = TestData.CreateTestStudentArray();
+
+            UtilityClass.BubbleSort(studentArray);
+
+            Student firstStudentInArray = studentArray[0];
+
+            int firstStudentIndexBuggyBinarySearch = UtilityClass.BuggyBinarySearchArray(studentArray, firstStudentInArray);
+
+            // Should return 0
+            Console.WriteLine($"\nIndex of First Student in Array Buggy Binary Search (Id {student1.StudentId}): {firstStudentIndexBuggyBinarySearch}\n");
 
             Console.ReadLine();
         }

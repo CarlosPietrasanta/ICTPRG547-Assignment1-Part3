@@ -93,6 +93,56 @@ namespace Assignment1.Utils
             }
         }
 
+        /// <summary>
+        /// Performs a buggy binary search in the specified SORTED array to find the index of the target element.
+        /// Don't do this at home.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array"></param>
+        /// <param name="target"></param>
+        /// <returns>The WRONG index of the item in the array if found. -1 if not found.</returns>
+        public static int BuggyBinarySearchArray<T>(T[] array, T target) where T : IComparable<T>
+        {
+            try
+            {
+                int min = 1;
+                int max = array.Length - 1;
+                int mid;
+
+                do
+                {
+                    mid = (max + min) / 2; // Get the middle index of the array
+
+                    // Compare items to get a value that will help us determine if it's the same item...
+                    // ...or if it comes after or before in the array
+                    int comparisonResult = target.CompareTo(array[mid]);
+
+                    // If comparison returned 0, we know it's the same item, return the current index being evaluated
+                    if (comparisonResult == 0)
+                    {
+                        return mid;
+                    }
+                    // If it returned a positive value, we need to focus on the upper half ("after" the current index) of the array
+                    else if (comparisonResult > 0)
+                    {
+                        min = mid + 1;
+                    }
+                    // Otherwise, it's a negative value, so we need to focus on the lower half ("before" the current index) of the array
+                    else
+                    {
+                        max = mid - 1;
+                    }
+                } while (min <= max);
+
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Something went wrong during binary search: " + ex.Message);
+                return -1;
+            }
+        }
+
         public static void BubbleSort<T>(T[] array) where T : IComparable<T>, IComparable
         {
             T temp;
